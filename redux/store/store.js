@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import authReducer from '../auth/authSlice';
+import counterReducer from '../counter/naikTurunSlice'; //pract 3
 import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 //import { buildGetDefaultMiddleware } from '@reduxjs/toolkit/dist/getDefaultMiddleware';
@@ -12,6 +13,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     auth: authReducer,
+    counter: counterReducer,   //pract 3 Reducer Counter
+    // add new other reducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

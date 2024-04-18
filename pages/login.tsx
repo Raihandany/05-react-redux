@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import parse from 'html-react-parser';
 
 export default function loginCheck() {
-    const {isLogin} = useSelector((state) => state.auth);
+    //const {isLogin} = useSelector((state) => state.auth);
     const dispatch = useDispatch();
 
     function handleAuth(type = 'logout') {

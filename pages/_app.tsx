@@ -5,28 +5,28 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
-// function myApp({ Component, pageProps } : AppProps){
-//   useEffect(()=>{
-//     require("bootstrap/dist/js/bootstrap.bundle.min.js")
-//   }, []);
-
-//   return (
-//     <Provider store={store}>
-//       <Component {...pageProps}/>
-//     </Provider>
-//   );
-// }
-
-// export default myApp;
-
-// Practicum 1
-function MyApp({ Component, pageProps}) {
-  useEffect(() =>{
+function myApp({ Component, pageProps } : AppProps){
+  useEffect(()=>{
     require("bootstrap/dist/js/bootstrap.bundle.min.js")
   }, []);
 
-  return <Component {...pageProps} />
+  return (
+    <Provider store={store}>
+      <Component {...pageProps}/>
+    </Provider>
+  );
 }
 
-export default MyApp;
+export default myApp;
+
+// Practicum 1
+// function MyApp({ Component, pageProps}) {
+//   useEffect(() =>{
+//     require("bootstrap/dist/js/bootstrap.bundle.min.js")
+//   }, []);
+
+//   return <Component {...pageProps} />
+// }
+
+// export default MyApp;
 
